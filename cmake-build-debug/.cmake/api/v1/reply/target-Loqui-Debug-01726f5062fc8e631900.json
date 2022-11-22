@@ -28,19 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 23,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 7,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -109,11 +103,11 @@
 					"path" : "F:/Users/Amstel/sources/repos/Loqui/src/views"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"path" : "F:/Users/Amstel/sources/repos/Loqui/lib"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"path" : "F:/Users/Amstel/sources/repos/Loqui/includes"
 				}
 			],

@@ -16,10 +16,7 @@ include_directories(src
         src/shared
         src/templates
         src/utils
-        src/views)
-
-include_directories(
-        src
+        src/views
         lib
         includes)
 

@@ -51,7 +51,7 @@ int ImmediateRGUI::MainMenu() {
     }
 
     if (ImGui::BeginMenu("Window")) {
-      ImGui::MenuItem("2D Scene Viewer", nullptr, &Scene2D.Open);
+      ImGui::MenuItem("View", nullptr, &Scene2D.Open);
 
       ImGui::EndMenu();
     }
