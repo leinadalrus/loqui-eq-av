@@ -1,15 +1,15 @@
-#include "hwind_config_impl.h"
+#include "open_plal_t.h"
 
 #define PL_MPEG_IMPLEMENTATION
 #include <pl_mpeg.h>
 
-HWindConfigImpl_t *create_app_w_params(const char *filename, int texture_mode);
-void update_prog_self(HWindConfigImpl_t *self);
-void destroy_prog_self(HWindConfigImpl_t *self);
+OPEN_PLAL_T *create_app_w_params(const char *filename, int texture_mode);
+void update_prog_self(OPEN_PLAL_t *self);
+void destroy_prog_self(OPEN_PLAL_t *self);
 
-GLuint compile_shader_proc(HWindConfigImpl_t *self, GLuint index, const char *source);
-GLuint create_texture_proc(HWindConfigImpl_t *self, GLuint index, const char *filename);
-void update_texture_proc(HWindConfigImpl_t *self, GLuint unit, GLuint texture, plm_plane_t *plane);
+GLuint compile_shader_proc(OPEN_PLAL_t *self, GLuint index, const char *source);
+GLuint create_texture_proc(OPEN_PLAL_t *self, GLuint index, const char *filename);
+void update_texture_proc(OPEN_PLAL_t *self, GLuint unit, GLuint texture, plm_plane_t *plane);
 
 void video_procs_on(plm_t *player, plm_frame_t *frame, char *data);
 void audio_procs_on(plm_t *player, plm_samples_t *samples, char *data);
@@ -33,10 +33,10 @@ const char *frag_shader(Texture2D texture_y,
   
   return (char*) {
     float y = (Texture2D)(texture_y, tex_coord).r;
-		float cb = (Texture2D)(texture_cb, tex_coord).r;
-		float cr = (Texture2D)(texture_cr, tex_coord).r;
+    float cb = (Texture2D)(texture_cb, tex_coord).r;
+    float cr = (Texture2D)(texture_cr, tex_coord).r;
     
-		gl_FragColor = vec4(y, cb, cr, 1.0) * rec601;
+    gl_FragColor = vec4(y, cb, cr, 1.0) * rec601;
   };
 }
 
