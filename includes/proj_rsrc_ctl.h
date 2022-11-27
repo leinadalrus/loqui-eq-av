@@ -1,5 +1,5 @@
-#ifndef SRC_MAIN_H
-#define SRC_MAIN_H
+#ifndef PROJ_RSRC_CTL_H
+#define PROJ_RSRC_CTL_H
 
 #include <condition_variable>
 #include <functional>

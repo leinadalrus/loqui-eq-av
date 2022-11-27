@@ -1,7 +1,7 @@
 #ifndef VISUAL_AUDIO_PROCESSOR_H
 #define VISUAL_AUDIO_PROCESSOR_H
 
-#include "./includes/src_main.h"
+#include <includes/proj_rsrc_ctl.h>
 
 class VisualAudioProcessor {
 public:
