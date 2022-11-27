@@ -4,12 +4,12 @@
 #include <pl_mpeg.h>
 
 OPEN_PLAL_T *create_app_w_params(const char *filename, int texture_mode);
-void update_prog_self(OPEN_PLAL_t *self);
-void destroy_prog_self(OPEN_PLAL_t *self);
+void update_prog_self(OpenPLAL_t *self);
+void destroy_prog_self(OpenPLAL_t *self);
 
-GLuint compile_shader_proc(OPEN_PLAL_t *self, GLuint index, const char *source);
-GLuint create_texture_proc(OPEN_PLAL_t *self, GLuint index, const char *filename);
-void update_texture_proc(OPEN_PLAL_t *self, GLuint unit, GLuint texture, plm_plane_t *plane);
+GLuint compile_shader_proc(OpenPLAL_t *self, GLuint index, const char *source);
+GLuint create_texture_proc(OpenPLAL_t *self, GLuint index, const char *filename);
+void update_texture_proc(OpenPLAL_t *self, GLuint unit, GLuint texture, plm_plane_t *plane);
 
 void video_procs_on(plm_t *player, plm_frame_t *frame, char *data);
 void audio_procs_on(plm_t *player, plm_samples_t *samples, char *data);

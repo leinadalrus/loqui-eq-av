@@ -12,7 +12,7 @@ _Pragma("GCC diagnostic ignored \"-Wconversion\"")
 _Pragma("GCC diagnostic ignored \"-Wold-style-cast\"")
 #endif
 
-typedef struct OPEN_PLAL_Context {};
+typedef struct OpenPLAL_ctx {} OPEN_PLAL_ctx;
 
 #include <AL/alc.h>
 #include <AL/al.h>
@@ -20,7 +20,7 @@ typedef struct OPEN_PLAL_Context {};
 
 #include <common/alhelpers.h>
 
-typedef struct OPEN_PLAL_t {
+typedef struct OpenPLAL_t {
   plm_t *plm;
   // SDL_Window *window;
   // SDL_AudioDeviceID audio_device;
@@ -41,7 +41,7 @@ typedef struct OPEN_PLAL_t {
   uint8_t *rgb_data;
 } OPEN_PLAL_t;
 
-class HWindConfigImpl: public OPEN_PLAL_t {
+class HWindConfigImpl: public OpenPLAL_t {
 public:
   HWindConfigImpl_t();
   ~HWindConfigImpl_t();
@@ -56,7 +56,7 @@ private:
   unsigned int hwind_item_uuid = 0;
   std::string hwind_item_title = "";
 
-  OPEN_PLAL_t *open_plal_self = {0};
+  OpenPLAL_t *open_plal_self = {0};
 };
 
 #endif
