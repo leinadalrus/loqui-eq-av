@@ -12,7 +12,7 @@ _Pragma("GCC diagnostic ignored \"-Wconversion\"")
 _Pragma("GCC diagnostic ignored \"-Wold-style-cast\"")
 #endif
 
-typedef struct OpenPLAL_ctx {} OPEN_PLAL_ctx;
+typedef struct OpenPLAL_ctx {} OpenPLAL_ctx;
 
 #include <AL/alc.h>
 #include <AL/al.h>
