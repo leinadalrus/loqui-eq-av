@@ -1,29 +1,21 @@
 #ifndef AL_PL_PLAYER_H
 #define AL_PL_PLAYER_H
 
-#include <condition_variable>
-#include <functional>
-#include <algorithm>
-#include <iostream>
-#include <utility>
-#include <iomanip>
-#include <cstdint>
-#include <cstring>
-#include <cstdlib>
-#include <atomic>
-#include <cerrno>
-#include <chrono>
-#include <cstdio>
-#include <future>
-#include <memory>
-#include <string>
-#include <thread>
-#include <vector>
-#include <array>
-#include <cmath>
-#include <deque>
-#include <mutex>
-#include <ratio>
+#include <includes/src_main.h>
+
+#ifdef __GNUC__
+_Pragma("GCC diagnostic push")
+_Pragma("GCC diagnostic ignored \"-Wconversion\"")
+_Pragma("GCC diagnostic ignored \"-Wold-style-cast\"")
+#endif
+
+typedef struct OPEN_PLAL_Context {};
+
+#include <AL/alc.h>
+#include <AL/al.h>
+#include <AL/alext.h>
+
+#include <common/alhelpers.h>
 
 typedef struct OPEN_PLAL_t {
   plm_t *plm;
@@ -45,7 +37,6 @@ typedef struct OPEN_PLAL_t {
   GLuint texture_rgb;
   uint8_t *rgb_data;
 } OPEN_PLAL_t;
-
 
 class HWindConfigImpl: public OPEN_PLAL_t {
 public:
