@@ -2,6 +2,9 @@
 #define AL_PL_PLAYER_H
 
 #include <includes/src_main.h>
+#include <rlimgui.h>
+#include <raylib.h>
+#include <imgui.h>
 
 #ifdef __GNUC__
 _Pragma("GCC diagnostic push")
@@ -44,7 +47,7 @@ public:
   ~HWindConfigImpl_t();
   
   char *create_on_demand();
-  struct *read_internal_args(char **args);
+  char *read_internal_args(char **args);
   int driver_update_entities(struct *driver_data);
   void *kill_and_destroy(void *destruct_on_deficit);
   

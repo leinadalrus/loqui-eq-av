@@ -57,7 +57,7 @@ char *HWindConfigImpl::create_on_demand() {
   return ret_value;
 }
 
-struct *HWindConfigImpl::read_internal_args(char **args) {
+char *HWindConfigImpl::read_internal_args(char **args) {
   struct *driver_data;
   
   return driver_data;
