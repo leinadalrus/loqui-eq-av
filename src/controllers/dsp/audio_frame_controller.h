@@ -3,7 +3,7 @@
 #include <C:\raylib\raylib\src\raylib.h>
 #include <C:\raylib\raylib\src\raymath.h>
 
-#include "../../includes/src_main.h"
+#include "../../includes/proj_rsrc_ctl.h"
 #include "/./models/dsp/biquad_filter.h"
 #include "../processors/audio/audio_frame_processor.h"
 #include "../../lib/libsndfile-1.1.0/include/sndfile.hh"

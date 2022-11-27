@@ -3,7 +3,7 @@
 #define M_PI 3.14159265358979323846
 #endif
 #include <array>
-#include "../share/data/au/audio_process_data.h"
+#include "../shared/data/au/audio_process_data.h"
 #include "generator_waveforms.h"
 
 #ifndef EFE3BA66_A836_4FBA_AF8D_A57384BDE529

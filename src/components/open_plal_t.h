@@ -1,7 +1,7 @@
 #ifndef AL_PL_PLAYER_H
 #define AL_PL_PLAYER_H
 
-#include <includes/src_main.h>
+#include <includes/proj_rsrc_ctl.h>
 #include <rlimgui.h>
 #include <raylib.h>
 #include <imgui.h>

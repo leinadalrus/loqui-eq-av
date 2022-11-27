@@ -4,7 +4,7 @@
 #define M_PI 3.14159265358979323846
 #endif
 #include <array>
-#include "../share/data/au/audio_process_data.h"
+#include "../shared/data/au/audio_process_data.h"
 
 #ifndef ENVELOPE_DETECTOR_H
 /* date = December 8th 2021 10:08 am */
