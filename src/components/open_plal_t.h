@@ -6,12 +6,6 @@
 #include <raylib.h>
 #include <imgui.h>
 
-#ifdef __GNUC__
-_Pragma("GCC diagnostic push")
-_Pragma("GCC diagnostic ignored \"-Wconversion\"")
-_Pragma("GCC diagnostic ignored \"-Wold-style-cast\"")
-#endif
-
 typedef struct OpenPLAL_ctx {} OpenPLAL_ctx;
 
 #include <AL/alc.h>
@@ -20,7 +14,20 @@ typedef struct OpenPLAL_ctx {} OpenPLAL_ctx;
 
 #include <common/alhelpers.h>
 
-typedef struct OpenPLAL_t {
+/*typedef struct*/ class OpenPLAL_t {
+public:
+  OpenPLAL_t(const char *filename, int texture_mode);
+  void update_prog_self(OpenPLAL_t *self);
+  void destroy_prog_self(OpenPLAL_t *self);
+
+  GLuint compile_shader_proc(GLuint index, const char *source);
+  GLuint create_texture_proc(GLuint index, const char *filename);
+  void update_texture_proc(GLuint unit, GLuint texture, plm_plane_t *plane);
+
+  void video_procs_on(plm_t *player, plm_frame_t *frame, char *data);
+  void audio_procs_on(plm_t *player, plm_samples_t *samples, char *data);
+
+private:
   plm_t *plm;
   // SDL_Window *window;
   // SDL_AudioDeviceID audio_device;
@@ -39,7 +46,7 @@ typedef struct OpenPLAL_t {
 
   GLuint texture_rgb;
   uint8_t *rgb_data;
-} OPEN_PLAL_t;
+} /*OPEN_PLAL_t*/;
 
 class HWindConfigImpl: public OpenPLAL_t {
 public:
