@@ -87,15 +87,13 @@ OpenPLAL_t *OpenPLAL_t::create_prog_self(const char *filename, int texture_mode)
   glAttachShader(this->shader_program, this->fragment_shader);
   glLinkProgram(this->shader_program);
   glUseProgram(this->shader_program);
-  
   // Create textures for YCrCb or RGB rendering
   if (this->texture_mode == APP_TEXTURE_MODE_YCRCB) {
-    this->texture_y  = app_create_texture(self, 0, "texture_y");
-    this->texture_cb = app_create_texture(self, 1, "texture_cb");
-    this->texture_cr = app_create_texture(self, 2, "texture_cr");
-  }
-  else {
-    this->texture_rgb = app_create_texture(self, 0, "texture_rgb");
+    this->texture_y  = this->create_texture_proc(self, 0, "texture_y");
+    this->texture_cb = this->create_texture_proc(self, 1, "texture_cb");
+    this->texture_cr = this->create_texture_proc(self, 2, "texture_cr");
+  } else {
+    this->texture_rgb = this->create_texture_proc(self, 0, "texture_rgb");
     int num_pixels = plm_get_width(this->plm) * plm_get_height(this->plm);
     this->rgb_data = (uint8_t*)malloc(num_pixels * 3);
   }
